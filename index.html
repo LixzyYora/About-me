@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me Dark Neon Cinematic</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"> </link>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
+  body { font-family:'Poppins', sans-serif; background:#0a0a0a; color:#0ff; overflow-x:hidden; position:relative; }
+  
+  /* particles background*/
+  #particles { position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; pointer-events:none; }
+
+  /* Glow Neon Section Effect */
+  section { max-width:900px; margin:50px auto; padding:40px 25px; background:rgba(0,0,0,0.85); border-radius:15px; box-shadow:0 0 20px #0ff; opacity:0; transform:translateY(50px); transition:all 1s ease-out, box-shadow 0.3s ease-in-out; position:relative; scroll-margin-top:120px; /* FIX scroll presisi */ }
+  section.visible { opacity:1; transform:translateY(0); }
+  section:hover { box-shadow:0 0 60px #0ff, 0 0 120px #0ff inset; }
+
+  /* Neon Header */
+  header { text-align:center; padding:60px 20px; color:#0ff; text-shadow:0 0 10px #0ff, 0 0 20px #00f, 0 0 30px #0ff; }
+  header h1 { font-size:3em; margin-bottom:10px; }
+  header p { font-size:1.2em; opacity:0.8; }
+
+  /* Navigation */
+  nav { display:flex; justify-content:center; gap:15px; flex-wrap:wrap; background:#111; padding:15px 0; box-shadow:0 0 15px #0ff; position:sticky; top:0; z-index:1000; }
+  nav a { color:#0ff; text-decoration:none; font-weight:600; padding:10px 15px; border-radius:8px; transition:0.3s; display:flex; align-items:center; gap:6px; }
+  nav a:hover { background:#0ff; color:#111; transform:scale(1.05); text-shadow:0 0 15px #0ff; }
+
+  h2 { color:#0ff; margin-bottom:25px; font-size:1.8em; border-bottom:2px solid #0ff; display:inline-block; padding-bottom:5px; text-shadow:0 0 5px #0ff; }
+
+  /* Contact Icons */
+  .contact-icons a { color:#0ff; font-size:1.5em; margin-right:15px; transition:0.3s; }
+  .contact-icons a:hover { color:#0ff; transform:scale(1.2); text-shadow:0 0 15px #0ff; }
+
+  /* Lists */
+  ul { list-style-type:square; padding-left:20px; }
+
+  /* Skill Bars */
+  .skill { margin-bottom:20px; }
+  .skill-name { font-weight:600; margin-bottom:8px; display:flex; align-items:center; gap:8px; text-shadow:0 0 5px #0ff; }
+  .progress { width:100%; background:#111; height:25px; border-radius:15px; overflow:hidden; box-shadow:inset 0 2px 5px rgba(0,255,255,0.3); }
+  .progress-bar { height:100%; width:0%; background:linear-gradient(90deg,#0ff,#00f); text-align:right; padding-right:10px; line-height:25px; color:#111; transition:width 2s ease-in-out; border-radius:15px; box-shadow:0 0 15px #0ff; }
+
+  /* Foto Section */
+  .foto-gallery { display:flex; flex-wrap:wrap; gap:15px; justify-content:center; }
+  .foto-gallery img { width:250px; height:250px; object-fit:cover; border-radius:15px; box-shadow:0 0 15px #0ff; transition:0.3s; }
+  .foto-gallery img:hover { transform:scale(1.05); box-shadow:0 0 40px #0ff; }
+
+  /* Audio Player */
+  .audio-player { text-align:center; margin:20px 0; }
+  audio { outline:none; border-radius:10px; box-shadow:0 0 20px #0ff; }
+
+  footer { text-align:center; padding:25px; background:#111; color:#0ff; border-radius:0 0 15px 15px; box-shadow:0 0 15px #0ff; margin-top:40px; }
+
+  /* Glow Follow Mouse Effect */
+  body::after {
+    content:""; position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none;
+    background:radial-gradient(circle at 50% 50%, rgba(0,255,255,0.2) 0%, transparent 80%);
+    mix-blend-mode:screen; transition:background-position 0.1s;
+    z-index:-1;
+ }
+</style>
+</head>
+<body>
+
+<div id="particles"></div>
+
+<header>
+  <h1>Olaa, I'm LixzyGanzX</h1>
+  <p>Welcome to about me</p>
+</header>
+
+<nav>
+  <a href="#contact"><i class="fas fa-address-book"></i> Contact</a>
+  <a href="#hobi"><i class="fas fa-gamepad"></i> Hobi</a>
+  <a href="#lagu"><i class="fas fa-music"></i> Lagu Favorit</a>
+  <a href="#tentang"><i class="fas fa-user"></i> Tentang Saya</a>
+  <a href="#keahlian"><i class="fas fa-code"></i> Keahlian Coding</a>
+</nav>
+
+<section class="audio-player">
+  <audio id="background-audio" loop muted>
+    <source src="[link_soundtrack.mp3]" type="audio/mpeg">
+    Browser Anda tidak mendukung audio.
+  </audio>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="contact-icons">
+    <a href="https://t.me/TuanmudaLixzy" target="_blank"><i class="fab fa-telegram"></i></a>
+    <a href="https://instagram.com/[username]" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://wa.me/6282260761554" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</section>
+
+<section id="hobi">
+  <h2>Hobi</h2>
+  <ul>
+    <li>Futsal</li>
+    <li>Main kasti</li>
+    <li>Mancing</li>
+  </ul>
+</section>
+
+<section id="lagu">
+  <h2>Lagu Favorit</h2>
+  <ul>
+    <li>Imposible    |  Cinta terlarang</li>
+    <li>Nevada       |  Monolog</li>
+    <li>All song sad |  All song nasheed</li>
+  </ul>
+</section>
+
+<section id="tentang">
+  <h2>Tentang Saya</h2>
+  <p>Halo! Nama saya Lixzy. Saya seorang Pelajar dan kuli sawit. Saya suka dengan musik mancing dan menyukai bahasa pemograman yang dikatakan rumit, saya sangat suka sekali dengan bahasa pemograman terutama HTML dan JavaScript.</p>
+</section>
+
+<section id="keahlian">
+  <h2>Keahlian Coding</h2>
+  <div class="skill">
+    <div class="skill-name"><i class="fab fa-html5"></i> HTML & CSS</div>
+    <div class="progress"><div class="progress-bar" data-width="95%">95%</div></div>
+  </div>
+  <div class="skill">
+    <div class="skill-name"><i class="fab fa-js"></i> JavaScript</div>
+    <div class="progress"><div class="progress-bar" data-width="85%">85%</div></div>
+  </div>
+  <div class="skill">
+    <div class="skill-name"><i class="fab fa-python"></i> Python</div>
+    <div class="progress"><div class="progress-bar" data-width="80%">80%</div></div>
+  </div>
+  <div class="skill">
+    <div class="skill-name"><i class="fas fa-terminal"></i> [Bahasa Lain]</div>
+    <div class="progress"><div class="progress-bar" data-width="70%">70%</div></div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 LixzyGanzX. All Rights Reserved.
+</footer>
+
+<script>
+  // Progress bar animasi
+  window.addEventListener('scroll', () => {
+    document.querySelectorAll('.progress-bar').forEach(bar => {
+      const rect = bar.getBoundingClientRect();
+      if(rect.top < window.innerHeight) bar.style.width = bar.dataset.width;
+    });
+  });
+
+  // Section animasi saat muncul di viewport
+  const sections = document.querySelectorAll('section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold:0.2 });
+  sections.forEach(sec => observer.observe(sec));
+
+  // Partikel neon bergerak
+  const particlesContainer = document.getElementById('particles');
+  const particleCount = 80;
+  const particles = [];
+  for(let i=0;i<particleCount;i++){
+    const p = document.createElement('div');
+    p.style.position='absolute';
+    p.style.width='3px';
+    p.style.height='3px';
+    p.style.background='#0ff';
+    p.style.borderRadius='50%';
+    p.style.top=Math.random()*window.innerHeight+'px';
+    p.style.left=Math.random()*window.innerWidth+'px';
+    p.style.opacity=Math.random();
+    p.dataset.dx=(Math.random()-0.5)*2;
+    p.dataset.dy=(Math.random()-0.5)*2;
+    particlesContainer.appendChild(p);
+    particles.push(p);
+  }
+  function animateParticles(){
+    particles.forEach(p=>{
+      let x=parseFloat(p.style.left);
+      let y=parseFloat(p.style.top);
+      x+=parseFloat(p.dataset.dx);
+      y+=parseFloat(p.dataset.dy);
+      if(x>window.innerWidth) x=0;
+      if(x<0) x=window.innerWidth;
+      if(y>window.innerHeight) y=0;
+      if(y<0) y=window.innerHeight;
+      p.style.left=x+'px';
+      p.style.top=y+'px';
+    });
+    requestAnimationFrame(animateParticles);
+  }
+  animateParticles();
+
+  // Audio autoplay pasti
+  window.addEventListener('load', () => {
+    const audio = document.getElementById('background-audio');
+    audio.volume = 0;
+    audio.muted = false;
+    const playPromise = audio.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        // Fade-in volume
+        let vol = 0;
+        const fade = setInterval(() => {
+          vol += 0.02;
+          if(vol >= 1){ vol=1; clearInterval(fade); }
+          audio.volume = vol;
+        }, 100);
+      }).catch(()=>{console.log("Autoplay diblokir oleh browser.")});
+    }
+  });
+
+  // Glow mengikuti mouse
+  document.addEventListener('mousemove', e => {
+    document.body.style.setProperty('background-position', `${e.clientX/10}px ${e.clientY/10}px`);
+  });
+</script>
+
+</body>
+</html>
